@@ -1,4 +1,4 @@
-require './corrector.rb'
+require './corrector'
 
 class Person
   def initialize(age, name = 'Unknown', parent_permission: true)
@@ -22,7 +22,7 @@ class Person
   end
 
   def validate_name
-    corrector = Corrector.new()
+    corrector = Corrector.new
     @name = corrector.correct_name(@name)
   end
 end
